@@ -16,13 +16,12 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>University Admission</h4>
-                <h5>B.Tech in AI & Data Science</h5>
+                <h5>M.Tech IT (5-Year Dual Degree)</h5>
               </div>
-              <h3>Upcoming</h3>
+              <h3>2026</h3>
             </div>
             <p>
-              Looking forward to getting admission in a prestigious university
-              to formally expand my expertise in Artificial Intelligence and Data Science.
+              I have taken admission in the M.Tech IT 5-year dual degree course at IIPS DAVV, Indore, and my first year started in 2026.
             </p>
           </div>
           <div className="career-info-box">
