@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&amp;display=swap');
+
+      .bg { fill: #02040a; }
+      .text-title {
+        font-family: 'Syncopate', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        fill: #ffffff;
+        letter-spacing: 6px;
+      }
+
+      .line {
+        stroke: #f59e0b;
+        stroke-width: 2;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: drawLine 3s forwards;
+      }
+
+      @keyframes drawLine {
+        to { stroke-dashoffset: 0; }
+      }
+
+      .hexagon {
+        fill: none;
+        stroke: #f59e0b;
+        stroke-width: 1.5;
+        animation: spin 10s linear infinite;
+        transform-origin: 700px 70px;
+      }
+      .hex-glow {
+        fill: none;
+        stroke: #f59e0b;
+        stroke-width: 4;
+        filter: blur(8px);
+        opacity: 0.5;
+        animation: spin 10s linear infinite reverse;
+        transform-origin: 700px 70px;
+      }
+
+      @keyframes spin {
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="150" />
+
+  <line x1="50" y1="110" x2="750" y2="110" class="line" />
+  <line x1="50" y1="110" x2="750" y2="110" stroke="#f59e0b" stroke-width="2" style="filter:blur(8px); opacity:0.5;" />
+
+  <text x="50" y="80" class="text-title">TECH STACK</text>
+
+  <path d="M 700 45 L 721.65 57.5 L 721.65 82.5 L 700 95 L 678.35 82.5 L 678.35 57.5 Z" class="hexagon" />
+  <path d="M 700 35 L 730.31 52.5 L 730.31 87.5 L 700 105 L 669.69 87.5 L 669.69 52.5 Z" class="hex-glow" />
+
+</svg>

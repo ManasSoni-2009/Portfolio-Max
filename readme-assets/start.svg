@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&amp;display=swap');
+
+      .bg { fill: #02040a; }
+      .text-title {
+        font-family: 'Syncopate', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        fill: #ffffff;
+        letter-spacing: 6px;
+      }
+
+      .line {
+        stroke: #ec4899;
+        stroke-width: 2;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: drawLine 3s forwards;
+      }
+
+      @keyframes drawLine {
+        to { stroke-dashoffset: 0; }
+      }
+
+      .rocket-flame {
+        fill: #ec4899;
+        animation: flicker 0.1s infinite alternate;
+      }
+
+      @keyframes flicker {
+        0% { opacity: 0.8; transform: scaleY(0.9); }
+        100% { opacity: 1; transform: scaleY(1.1); }
+      }
+
+      .speed-line {
+        stroke: #ec4899;
+        stroke-width: 2;
+        stroke-linecap: round;
+        animation: dash 1s linear infinite;
+      }
+
+      @keyframes dash {
+        0% { transform: translateX(0); opacity: 1; }
+        100% { transform: translateX(50px); opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="150" />
+
+  <line x1="50" y1="110" x2="750" y2="110" class="line" />
+  <line x1="50" y1="110" x2="750" y2="110" stroke="#ec4899" stroke-width="2" style="filter:blur(8px); opacity:0.5;" />
+
+  <text x="50" y="80" class="text-title">QUICK START</text>
+
+  <g transform="translate(680, 50)">
+    <path d="M20 0 L30 15 L30 30 L10 30 L10 15 Z" fill="#ffffff" />
+    <path d="M10 20 L0 35 L10 30 Z" fill="#9ca3af" />
+    <path d="M30 20 L40 35 L30 30 Z" fill="#9ca3af" />
+    <path d="M15 30 L25 30 L20 45 Z" class="rocket-flame" transform-origin="20 30" />
+
+    <line x1="-30" y1="40" x2="-10" y2="40" class="speed-line" />
+    <line x1="-20" y1="50" x2="0" y2="50" class="speed-line" style="animation-delay: 0.2s;" />
+    <line x1="-40" y1="45" x2="-20" y2="45" class="speed-line" style="animation-delay: 0.4s;" />
+  </g>
+
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&amp;display=swap');
+
+      .bg { fill: #02040a; }
+      .text-title {
+        font-family: 'Syncopate', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        fill: #ffffff;
+        letter-spacing: 6px;
+      }
+      .text-glow {
+        fill: none;
+        stroke: #10b981;
+        stroke-width: 2;
+        filter: blur(4px);
+        animation: neon 1.5s ease-in-out infinite alternate;
+      }
+
+      @keyframes neon {
+        from { opacity: 0.4; }
+        to { opacity: 1; }
+      }
+
+      .line {
+        stroke: #10b981;
+        stroke-width: 2;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: drawLine 3s forwards;
+      }
+
+      @keyframes drawLine {
+        to { stroke-dashoffset: 0; }
+      }
+
+      .particle {
+        fill: #10b981;
+        animation: float 4s infinite ease-in-out alternate;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px) scale(0.8); opacity: 0.3; }
+        100% { transform: translateY(-15px) scale(1.2); opacity: 0.8; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="800" height="150" />
+
+  <line x1="50" y1="110" x2="750" y2="110" class="line" />
+  <line x1="50" y1="110" x2="750" y2="110" stroke="#10b981" stroke-width="2" style="filter:blur(8px); opacity:0.5;" />
+
+  <text x="50" y="80" class="text-title">KEY FEATURES</text>
+
+  <circle cx="700" cy="50" r="2" class="particle" style="animation-delay: 0s;" />
+  <circle cx="720" cy="70" r="3" class="particle" style="animation-delay: 1s;" />
+  <circle cx="740" cy="40" r="1.5" class="particle" style="animation-delay: 2s;" />
+
+</svg>
